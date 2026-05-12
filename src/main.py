@@ -4,7 +4,7 @@ Description: Runs FCFS & RR, Prints gantt chart & metrics (All printing happens 
 Author: Teagan Holmes
 Date: 5/12/2026
 """
-from sched import ( #get scheduler methods
+from scheduler import ( #get scheduler methods
     sched_init,
     sched_shutdown,
     sched_create_process,

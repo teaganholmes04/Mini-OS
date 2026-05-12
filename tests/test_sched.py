@@ -7,7 +7,7 @@ Date: 5/12/2026
 
 """
 import pytest #test library
-from sched import ( #import scheduler methods
+from scheduler import ( #import scheduler methods
     sched_init,
     sched_shutdown,
     sched_create_process,

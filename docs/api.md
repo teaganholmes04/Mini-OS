@@ -13,7 +13,6 @@ Document explaining how the API works.
     * Shuts down scheduler
     
 3. Process Management
-
 3.1 Create Process
     int sched_create_process(int pid, int arrival, int burst)
     * Adds new process to scheduler
@@ -34,6 +33,7 @@ Document explaining how the API works.
     Returns:
         *0 when successful
         *-1 if process doesn't exist
+        
 4. Scheduling Algorithms
     4.1: Run FCFS algorithm
         int sched_run_fcfs(list[sched_slice_t] slices, int max_slices)
@@ -48,13 +48,16 @@ Document explaining how the API works.
         int sched_run_rr(int quantum, list[sched_slice_t] slices, int max_slices)
         * Runs Round Robin algorithm
         Parameters:
-            *
+            *quantum: time slice size
+            *slices: holds list of slices
+            *max_slices: max # of slices list can hold
         Returns:
             *0 when successful
             *-1 if no active proccesses
             *-2 if no enough slices in list
             *-3 if invalid quantum value
-5. Get Metrics
+   
+6. Get Metrics
     sched_get_metrics(int pid) -> (waiting, turnaround, completion) | -1
     * Gets performance metrics for proccesses after scheduling is done
     Parameters:

@@ -6,7 +6,7 @@ Date: 5/12/2026
 
 """
 
-from .scheduler import (
+from .sched import (
     # Start, term scheduler; Create & term processes; Run FCFS & RR; Get metrics; slice list
     sched_init,
     sched_shutdown,
